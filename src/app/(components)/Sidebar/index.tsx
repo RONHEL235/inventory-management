@@ -5,6 +5,10 @@ import { setIsSidebarCollapsed } from '@/state'
 import { Menu } from 'lucide-react'
 import React from 'react'
 
+const SidebarLink = ({
+  
+})
+
 const Sidebar = () => {
 
   const dispatch = useAppDispatch()
