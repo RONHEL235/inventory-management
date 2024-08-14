@@ -2,17 +2,32 @@
 
 import { useAppDispatch, useAppSelector } from '@/app/redux'
 import { setIsSidebarCollapsed } from '@/state'
-import { Menu } from 'lucide-react'
+import { LucideIcon, Menu } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
-const SidebarLink = ({
-  
-})
+interface SidebarLinkProps {
+  href: string
+  icon: LucideIcon
+  label: string
+  isCollapsed: boolean 
+}
 
+const SidebarLink = ({
+  href,
+  icon: Icon,
+  label,
+  isCollapsed  
+}: SidebarLinkProps) => {
+  const pathname = usePathname()
+  const isActive = pathname === href || (pathname === "/" && href === "/dashboard")
+} 
+ 
 const Sidebar = () => {
 
   const dispatch = useAppDispatch()
-  const isSidebarCollapsed = useAppSelector((state) => state.global.isSidebarCollapsed) 
+  const isSidebarCollapsed = useAppSelector(
+    (state) => state.global.isSidebarCollapsed) 
 
   const toggleSidebar = () => {
     dispatch(setIsSidebarCollapsed(!isSidebarCollapsed))
@@ -25,9 +40,9 @@ const Sidebar = () => {
   return (
     <div className={sidebarClassNames}>
       {/* TOP LOGO */}
-      <div className="flex gap-3 justify-between md:justify-normal items-center pt-8">
+      <div className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${isSidebarCollapsed ? "px-5" : "px-8"}`}>
         <div>logo</div>
-        <h1 className="font-extrabold text-2xl">RonStock</h1>
+        <h1 className={`${isSidebarCollapsed ? "hidden" : "block"}  font-extrabold text-2xl`}>RonStock</h1>
         <button className="md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100" 
         onClick={toggleSidebar}>
           <Menu className="w-4 h-4" />
