@@ -56,7 +56,7 @@ const Sidebar = () => {
 
       {/* FOOTER */}
       <div>
-        <p className="text-center text-xs text-gray-500">&copy; 2024 RonStock</p>
+        <p className="text-center text-xs text-gray-500">&copy; 2027 RonStock</p>
       </div>
     </div>
   )
