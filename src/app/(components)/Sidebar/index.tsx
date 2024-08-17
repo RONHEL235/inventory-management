@@ -3,6 +3,7 @@
 import { useAppDispatch, useAppSelector } from '@/app/redux'
 import { setIsSidebarCollapsed } from '@/state'
 import { LucideIcon, Menu } from 'lucide-react'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
@@ -21,6 +22,13 @@ const SidebarLink = ({
 }: SidebarLinkProps) => {
   const pathname = usePathname()
   const isActive = pathname === href || (pathname === "/" && href === "/dashboard")
+
+  return (
+    <Link href={href}>
+      <div className={`cursor-pointer flex items-center ${isCollapsed ? "justify-center py-4" : "justify-start px-8 py-4"}`}>
+      </div>
+    </Link> 
+  )
 } 
  
 const Sidebar = () => {
