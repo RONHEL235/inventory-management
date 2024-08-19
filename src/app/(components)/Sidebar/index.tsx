@@ -25,7 +25,7 @@ const SidebarLink = ({
 
   return (
     <Link href={href}>
-      <div className={`cursor-pointer flex items-center ${isCollapsed ? "justify-center py-4" : "justify-start px-8 py-4"}`}>
+      <div className={`cursor-pointer flex items-center ${isCollapsed ? "justify-center py-4" : "justify-start px-12 py-4"}`}>
       </div>
     </Link> 
   )
