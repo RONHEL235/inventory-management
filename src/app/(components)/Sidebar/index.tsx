@@ -25,7 +25,12 @@ const SidebarLink = ({
 
   return (
     <Link href={href}>
-      <div className={`cursor-pointer flex items-center ${isCollapsed ? "justify-center py-4" : "justify-start px-12 py-8"}`}>
+      <div className={`cursor-pointer flex items-center ${isCollapsed ? "justify-center py-4" : "justify-start px-8 py-4"
+      }
+      hover:text-blue-500 hover:bg-blue-100 gap-3 transition-colors 
+      ${isActive ? "bg-blue-200 text-white" : ""}  
+      }`}>
+        <Icon className="w-6 h-6 !text-gray-700" />
       </div>
     </Link> 
   )
