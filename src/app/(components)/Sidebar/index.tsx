@@ -31,6 +31,9 @@ const SidebarLink = ({
       ${isActive ? "bg-blue-200 text-white" : ""}  
       }`}>
         <Icon className="w-6 h-6 !text-gray-700" />
+        <span className={`${isCollapsed ? "hidden" : "block"} font-medium text-gray-700`}>
+          {label}
+        </span>
       </div>
     </Link> 
   )
@@ -64,7 +67,7 @@ const Sidebar = () => {
 
       {/* LINKS */}
       <div className="flex-grow mt-8">
-        {/* links here */}
+        <SidebarLink href/>
       </div>
 
       {/* FOOTER */}
