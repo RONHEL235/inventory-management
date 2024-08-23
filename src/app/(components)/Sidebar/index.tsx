@@ -2,7 +2,7 @@
 
 import { useAppDispatch, useAppSelector } from '@/app/redux'
 import { setIsSidebarCollapsed } from '@/state'
-import { LucideIcon, Menu } from 'lucide-react'
+import { Layout, LucideIcon, Menu } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
@@ -67,7 +67,7 @@ const Sidebar = () => {
 
       {/* LINKS */}
       <div className="flex-grow mt-8">
-        <SidebarLink href/>
+        <SidebarLink href="/dashboard" icon={Layout} label="Dashboard" isCollapsed={isSidebarCollapsed} />
       </div>
 
       {/* FOOTER */}
