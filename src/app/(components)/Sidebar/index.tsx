@@ -66,7 +66,7 @@ const Sidebar = () => {
       </div> 
 
       {/* LINKS */}
-      <div className="flex-grow mb-10 mt-8">
+      <div className="flex-grow mt-8">
         <SidebarLink 
           href="/dashboard" 
           icon={Layout} 
