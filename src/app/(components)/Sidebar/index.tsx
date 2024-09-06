@@ -51,7 +51,7 @@ const Sidebar = () => {
 
   const sidebarClassNames = `fixed flex flex-col ${
     isSidebarCollapsed ? "w-0 md:w-16" : "w-72 md:w-64"
-  } bg-white transition-all duration 300 overflow-hidden h-full shadow-md z-40`
+  } bg-white transition-all duration 400 overflow-hidden h-full shadow-md z-40`
 
   return (
     <div className={sidebarClassNames}>
@@ -104,6 +104,7 @@ const Sidebar = () => {
           isCollapsed={isSidebarCollapsed} 
         />
       </div>
+
       {/* FOOTER */}
       <div className={`${isSidebarCollapsed ? "hidden" : "block"} mb-12`}>
         <p className="text-center text-xs text-gray-500">
