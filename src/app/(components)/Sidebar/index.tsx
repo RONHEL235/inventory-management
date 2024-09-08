@@ -50,7 +50,7 @@ const Sidebar = () => {
   }
 
   const sidebarClassNames = `fixed flex flex-col ${
-    isSidebarCollapsed ? "w-0 md:w-16" : "w-72 md:w-64"
+    isSidebarCollapsed ? "w-0 md:w-16" : "w-72 md:w-60"
   } bg-white transition-all duration 400 overflow-hidden h-full shadow-md z-40`
 
   return (
