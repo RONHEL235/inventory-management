@@ -17,7 +17,11 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(cors())
 
-/* ROUTES * /
+/* ROUTES */
+
+app.get("/hello", (req, res) => {
+    res.send("hello world2")
+})
 
 /* SERVER */
 const port = process.env.PORT || 3001
